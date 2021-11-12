@@ -11,8 +11,9 @@ public class OrderDetailController {
     @Autowired
     OrderDetailServices orderDetailServices;
     @PostMapping("/orderdetail")
-    public OrderDetailModel saveOrderDetails(@RequestBody OrderDetailModel orderDetailModel){
+    public OrderDetailModel saveOrderDetails(@ModelAttribute OrderDetailModel orderDetailModel){
          OrderDetailModel ordDetail = orderDetailServices.saveOrderDetails(orderDetailModel);
          return ordDetail;
+
     }
 }
