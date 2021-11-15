@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Order1")
+@Table(name = "order1")
 public class OrderDetailModel {
     @Id
     @GeneratedValue
@@ -96,5 +96,19 @@ public class OrderDetailModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderDetailModel{" +
+                "order_id=" + order_id +
+                ", cust_id='" + cust_id + '\'' +
+                ", order_date='" + order_date + '\'' +
+                ", dilvery_date='" + dilvery_date + '\'' +
+                ", qty=" + qty +
+                ", rate=" + rate +
+                ", amount=" + amount +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

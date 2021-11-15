@@ -14,7 +14,7 @@
 <div class="card" style="margin: 50px 250px;">
   <div class="card-body">
     <h3 class="card-title p-3">Order Detail Form</h3>
-    <form class="p-3"  action="/api/orderdetail" method="post" id="nameForm">
+    <form class="p-3"  action="/api/savedetail/" method="post" id="nameForm">
       <div class="mb-3">
         <label for="order_id" class="form-label">Order Id</label>
         <input type="number" class="form-control" id="order_id" name="order_id">
@@ -48,6 +48,16 @@
         <input type="text" class="form-control" id="status" name="status">
       </div>
       <button type="submit" class="btn btn-primary align-items-center">Submit</button>
+
+
+      <button>
+        <a class="btn" btn-secondary href="/updatedetail.html">Update</a>
+      </button>
+
+      <button>
+        <a class="btn" btn-secondary href="/api/showdetail">Show</a>
+      </button>
+
       <button type="reset" class="btn btn-dark">Reset</button>
       ​
     </form>
